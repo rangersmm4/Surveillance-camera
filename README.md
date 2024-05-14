@@ -29,3 +29,8 @@
   >開啟 incoming webhook integration，會拿到一個 webhook URL，把它記下來
   >寫一個 shell script(這邊以motion-slack.sh為檔名)，WEBHOOK_URL填入上面拿到的URL，USERNAME可以隨意更改
   >"chmod +x motion-slack.sh"改成可執行檔
+>
+"sudo apt install tmux"
+tmux
+
+鍵盤設定相關
