@@ -6,7 +6,7 @@
   >將SD卡插入樹莓派，開機並跟著步驟完成安裝
 
 步驟2.利用vnc遠端桌面操作樹莓派
-  >樹莓派開機後至樹梅派設定裡開啟vnc功能
+  >樹莓派開機後至樹梅派左上角>偏好設定->raspberry pi 設定->介面->開啟vnc功能->右下角apply
   >打開terminal打上"ifconfig"查看樹莓派ip位址
   >電腦端下載vnc viewer(用哪個裝置就下載哪個os):https://www.realvnc.com/en/connect/download/viewer/windows/
   >vnc viewer下載安裝好後打上查到的樹莓派ip位址即可遠端操作
