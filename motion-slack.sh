@@ -1,3 +1,8 @@
+#當從montion的log file裡讀到"event_newfile"時傳送通知至slack
+#USERNAME自行定義
+#CHANNEL為工作區中指定頻道
+
+
 #!/bin/bash
 set -e
 LOG_FILE='/var/log/motion/motion.log'
