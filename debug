@@ -2,4 +2,73 @@
 *"sudo apt-get install fswebcam"
   "fswebcam test.jpg"
     下載安裝並讓他拍張照查看鏡頭可否正常運作
-  
+
+
+*確保montion.conf參數中的'logfile'路徑存在並且motion有寫入權限，同樣確保'target_dir'目錄存在且motion具有寫入權限
+*確保montion.conf參數中的webcontrol_port、stream_port端口號皆沒有被占用
+*為確保motion有權限可寫入，可以執行以下步驟：
+  檢查日志文件路徑：首先確認 /var/log/motion/motion.log 這個路徑是否存在。
+  通過終端執行以下命令來檢查：
+  "ls /var/log/motion/motion.log"
+
+  //檢查權限：確保 Motion 進程有權限在該路徑下創建和寫入日志文件。你可以執行以下命令來查看文件的權限信息：
+  "ls -l /var/log/motion/motion.log"
+  若Motion沒有權限寫入日志文件，會看到類似以下輸出：
+  "-rw-r--r-- 1 root root 12345 Apr 26 10:00 /var/log/motion/motion.log"
+  在這個例子中，只有 root 用戶有權限寫入，其他用戶只有讀取權限。
+
+  //更改權限：如果 Motion 沒有足夠的權限寫入日志文件，你可以使用 chmod 命令更改權限。例如，你可以將權限設置為允許所有用戶寫入：
+  (a+w =添加寫入權限給所有用戶。
+  a-w 表示移除寫入權限給所有用戶。
+  a+x 表示添加執行權限給所有用戶。
+  a-r 表示移除讀取權限給所有用戶。)
+  "sudo chmod a+w /var/log/motion/motion.log"
+  或者將文件的所有權修改為 Motion 進程所屬的用戶和組：
+  "sudo chown motion:motion /var/log/motion/motion.log"
+  在修改權限之後，重啟 Motion 服務以使更改生效：
+  "sudo systemctl restart motion"
+
+*motion status顯示成功但在8080看不到畫面:
+  "sudo netstat -tuln | grep 8081"
+如果輸出顯示 Motion 正在監聽端口 8081，表示 Motion 已經在正確的網絡接口上偵聽了。
+
+//配置文件設置：檢查 Motion 的配置文件 (/etc/motion/motion.conf) 中關於流媒體和網絡設置的部分，確保配置正確。特別是檢查以下參數是否正確設置：
+stream_port 8081
+stream_localhost off
+
+//日志文件：檢查 Motion 的日志文件 (/var/log/motion/motion.log) 是否有任何與網絡或流媒體相關的錯誤消息。
+
+*如果想讓使用者（或其他特定使用者）能夠直接在文件夾中修改文件，你可以使用以下命令：
+  "sudo chown -R your_username /path/to/directory"
+  這將文件夾及其內容的所有權改為你的使用者名稱，可直接對文件夾中的文件進行寫入操作。
+
+
+
+
+*要關閉Motio，可執行以下步驟：
+  //停止Motion進程：使用終端應用程序（例如命令提示符或終端機），執行以下命令來停止 Motion 進程：
+  "sudo service motion stop"
+  "sudo systemctl stop motion"
+
+  //確認 Motion 是否已停止： 執行以下命令來確認 Motion 是否已停止：
+  "sudo service motion status"
+  "sudo systemctl status motion"
+  如果 Motion 已成功停止，你將看到相應的狀態消息顯示 Motion 已停止運行。
+
+  //選擇性地禁用 Motion 服務： 如果你希望 Motion 在系統啟動時不自動啟動，可以禁用 Motion 服務。執行以下命令以禁用 Motion 服務：
+  "sudo systemctl disable motion"
+  這樣將防止 Motion 在系統重新啟動後自動啟動。如果將來需要重新啟用，可以使用 enable 命令。
+
+
+****額外附加:
+*要怎麼提供權限讓我能在var創建文件
+//使用 chmod 命令修改 /var 目錄的權限。
+給 /var 目錄添加寫入權限：
+sudo chmod o+w /var
+這條命令將為 /var 目錄的其他用戶（o）添加寫入（w）權限。
+!更改 /var 目錄的權限可能會對系統的安全性造成影響，因此應該謹慎操作。最好僅在必要時進行修改，並在完成任務後恢覆默認權限。
+
+//使用 setfacl 命令時，你可以指定特定的用戶或用戶組以及對應的權限。
+假設你的用戶名是 your_username：
+sudo setfacl -m u:your_username:rwx /var
+這條命令會為用戶 your_username 添加對 /var 目錄的讀取、寫入和執行權限。
