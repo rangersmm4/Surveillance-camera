@@ -1,0 +1,5 @@
+*"lsusb":確認camera攝像頭有被讀取到(可以先拔掉再插上察看是哪一個)
+*"sudo apt-get install fswebcam"
+  "fswebcam test.jpg"
+    下載安裝並讓他拍張照查看鏡頭可否正常運作
+  
