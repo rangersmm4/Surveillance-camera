@@ -78,3 +78,5 @@ sudo setfacl -m u:your_username:rwx /var
 這條命令會為用戶 your_username 添加對 /var 目錄的讀取、寫入和執行權限。
 
 *smtp gmail失敗:google smtp服務將停止
+
+*rclone:可將影片上傳至雲端的工具，因為可以直接vnc查看影片路徑故取消
