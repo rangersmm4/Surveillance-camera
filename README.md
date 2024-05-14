@@ -17,10 +17,15 @@
 
 步驟4.調整motion設定
   >至"/etc/motion/motion.conf"改變參數設定
-  >"sudo nano /etc/default/motion"編輯設定檔
-  >"start_motion_daemon"參數改為on(可後臺執行)
->
+  >"sudo nano /etc/default/motion"編輯設定檔(設定檔內容看motion.conf)
+  >改好後"sudo service motion restart"
+  >"sudo service motion start" "sudo motion"
+  >"sudo service motion status"查看motion有沒有成功開啟(log及status有無錯誤訊息)
+  >motion啟動後會開始監控攝像頭並在偵測到移動時觸發事件
+  >訪問motion的網路介面:預設的motion端口號為8080(可至motion.conf更改)，在瀏覽器中輸入"樹莓派ip位址:8080"即可查看實時畫面
 
 步驟5.使motion偵測移動時發送及時通知至slack
-  >slack開一個新的工作區
-
+  >在slack開一個新的工作區(https://slack.com/intl/zh-tw/)
+  >開啟 incoming webhook integration，會拿到一個 webhook URL，把它記下來
+  >寫一個 shell script(這邊以motion-slack.sh為檔名)，WEBHOOK_URL填入上面拿到的URL，USERNAME可以隨意更改
+  >"chmod +x motion-slack.sh"改成可執行檔
