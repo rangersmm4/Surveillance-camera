@@ -13,7 +13,7 @@
 
 步驟3.安裝motion
   >在樹莓派terminal打上"sudo apt-get install motion"(可先"sudo apt-get update、sudo apt-get upgrade")
-  >接著安裝一些必要套件"sudo apt-get install libjpeg-dev gettext libmicrohttpd-dev libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev libwebp-dev mysql-common libmariadbclient18 libpq5"(若出現錯誤就下載提供的lib檔)
+  >接著安裝一些必要套件"sudo apt-get install libjpeg-dev gettext libmicrohttpd-dev libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev libwebp-dev mysql-common libmariadb3 libpq5"(若出現錯誤就下載提供的lib檔)
 
 步驟4.調整motion設定
   >至"/etc/motion/motion.conf"改變參數設定
