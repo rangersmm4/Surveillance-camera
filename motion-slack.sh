@@ -2,7 +2,7 @@
 #USERNAME自行定義
 #CHANNEL為工作區中指定頻道
 #send_slack_message，用於發送消息到 Slack。
-#發送一條開始監視的消息到 Slack。
+#執行後先發送一條消息"motion alert started!"到 Slack。
 #使用 tail -n0 -F "${LOG_FILE}" 命令來監視 Motion 日志文件，其中 -n0 表示從文件末尾開始，-F 表示跟蹤文件的變化，以便實時獲取新添加的內容。
 
 #!/bin/bash
