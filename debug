@@ -1,11 +1,15 @@
 *"lsusb":確認camera攝像頭有被讀取到(可以先拔掉再插上察看是哪一個)
-*"sudo apt-get install fswebcam"
-  "fswebcam test.jpg"
-    下載安裝並讓他拍張照查看鏡頭可否正常運作
 
+*測試攝像頭:
+  terminal輸入以下命令來安裝 fswebcam:
+  "sudo apt-get install fswebcam"
+  使用命令來拍攝一張照片，攝像頭工作正常，將會在當前目錄下生成一張名為 test.jpg 的照片
+  "fswebcam test.jpg"
 
 *確保montion.conf參數中的'logfile'路徑存在並且motion有寫入權限，同樣確保'target_dir'目錄存在且motion具有寫入權限
+
 *確保montion.conf參數中的webcontrol_port、stream_port端口號皆沒有被占用
+
 *為確保motion有權限可寫入，可以執行以下步驟：
   檢查日志文件路徑：首先確認 /var/log/motion/motion.log 這個路徑是否存在。
   通過終端執行以下命令來檢查：
