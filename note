@@ -76,3 +76,5 @@ sudo chmod o+w /var
 假設你的用戶名是 your_username：
 sudo setfacl -m u:your_username:rwx /var
 這條命令會為用戶 your_username 添加對 /var 目錄的讀取、寫入和執行權限。
+
+*smtp gmail失敗:google smtp服務將停止
