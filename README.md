@@ -23,7 +23,6 @@
   >"sudo service motion status"查看motion有沒有成功開啟(log及status有無錯誤訊息)  
   >motion啟動後會開始監控攝像頭並在偵測到移動時觸發事件  
   >訪問motion的網路介面:預設的motion端口號為8080(可至motion.conf更改)，在瀏覽器中輸入"樹莓派ip位址:8080"即可查看實時畫面
->![image](image/1.png)
 
 步驟5.使motion偵測移動時發送及時通知至slack  
   >在slack開一個新的工作區(https://slack.com/intl/zh-tw/)  
@@ -42,7 +41,14 @@
   >
   >停止：在 tmux會話中按下 Ctrl + D 或者執行 exit 命令來結束會話。   
   >開始使用:執行motion及tmux，查看能否在偵測移動時發送通知至slack!  
-  
+
+  執行成果:
+  >![image](image/1.png)
+  >![image](image/4.png)
+  >![image](image/3.png)
+  >![image](image/2.png)
+  >![image](image/6.png)
+  >![image](image/5.png)
   
 
   
