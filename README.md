@@ -34,14 +34,13 @@
   >tmux是一個終端覆用工具，允許在單個終端窗口中創建多個終端會話，並在這些會話之間進行切換。使用tmux可以在終端窗口中同時運行多個命令和程序，並且可以在不同會話之間保持持久性。  
   >安裝tmux:"sudo apt install tmux"  
 
-  在終端中運行 tmux 命令打開一個新的 tmux 會話，然後在會話中運行腳本。  
-  "tmux"   
-  "cd /etc/motion"   
-  "./motion-slack.sh"  
+  >在終端中運行 tmux 命令打開一個新的 tmux 會話，然後在會話中運行腳本。  
+  >"tmux"   
+  >"cd /etc/motion"   
+  >"./motion-slack.sh"  
   
-  停止：在 tmux會話中按下 Ctrl + D 或者執行 exit 命令來結束會話。  
-    
-  開始使用:執行motion及tmux，查看能否在偵測移動時發送通知至slack!  
+  >停止：在 tmux會話中按下 Ctrl + D 或者執行 exit 命令來結束會話。   
+  >開始使用:執行motion及tmux，查看能否在偵測移動時發送通知至slack!  
   
   
 
