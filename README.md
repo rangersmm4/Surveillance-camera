@@ -1,9 +1,9 @@
 # Surveillance-camera
-步驟1.幫樹莓派安裝作業系統
-  >下載樹莓派映像檔:https://www.raspberrypi.com/software/operating-systems/  (這邊用的是桌面可以用滑鼠操作的請選Raspbian Buster with desktop)
-  >把SD卡格式化為FAT32格式
-  >用balenaEtcher工具把映像檔燒到SD卡中
-  >將SD卡插入樹莓派，開機並跟著步驟完成安裝
+步驟1.幫樹莓派安裝作業系統  
+  >下載樹莓派映像檔:https://www.raspberrypi.com/software/operating-systems/  (這邊用的是桌面可以用滑鼠操作的請選Raspbian Buster with desktop)  
+  >把SD卡格式化為FAT32格式  
+  >用balenaEtcher工具把映像檔燒到SD卡中  
+  >將SD卡插入樹莓派，開機並跟著步驟完成安裝  
 
 步驟2.利用vnc遠端桌面操作樹莓派
   >樹莓派開機後至樹梅派左上角>偏好設定->raspberry pi 設定->介面->開啟vnc功能->右下角apply
