@@ -38,7 +38,7 @@
   >"tmux"   
   >"cd /etc/motion"   
   >"./motion-slack.sh"  
-  
+  >
   >停止：在 tmux會話中按下 Ctrl + D 或者執行 exit 命令來結束會話。   
   >開始使用:執行motion及tmux，查看能否在偵測移動時發送通知至slack!  
   
