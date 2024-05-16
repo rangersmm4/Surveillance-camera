@@ -17,10 +17,10 @@
   
 步驟4.調整motion設定  
   >至"/etc/motion/motion.conf"改變參數設定  
-  >"sudo nano /etc/default/motion"編輯設定檔(設定檔內容看motion.conf)
-  >"cd /var/log"
-  >"sudo mkdir motion"創建一個資料夾
-  >"sudo chmod a+w /var/log"賦予可讀寫權限
+  >"sudo nano /etc/default/motion"編輯設定檔(設定檔內容看motion.conf)  
+  >"cd /var/log"  
+  >"sudo mkdir motion"創建一個資料夾  
+  >"sudo chmod a+w /var/log"賦予可讀寫權限  
   >改好後"sudo service motion restart"  
   >"sudo service motion start" "sudo motion"  
   >"sudo service motion status"查看motion有沒有成功開啟(log及status有無錯誤訊息)  
