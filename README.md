@@ -22,7 +22,8 @@
   >"sudo service motion start" "sudo motion"  
   >"sudo service motion status"查看motion有沒有成功開啟(log及status有無錯誤訊息)  
   >motion啟動後會開始監控攝像頭並在偵測到移動時觸發事件  
-  >訪問motion的網路介面:預設的motion端口號為8080(可至motion.conf更改)，在瀏覽器中輸入"樹莓派ip位址:8080"即可查看實時畫面  
+  >訪問motion的網路介面:預設的motion端口號為8080(可至motion.conf更改)，在瀏覽器中輸入"樹莓派ip位址:8080"即可查看實時畫面
+>![image](image/1.png)
 
 步驟5.使motion偵測移動時發送及時通知至slack  
   >在slack開一個新的工作區(https://slack.com/intl/zh-tw/)  
