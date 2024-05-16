@@ -29,11 +29,11 @@
   >開啟 incoming webhook integration，會拿到一個 webhook URL，把它記下來  
   >寫一個 shell script(這邊以motion-slack.sh為檔名)，WEBHOOK_URL填入上面拿到的URL，USERNAME可以隨意更改  
   >"chmod +x motion-slack.sh"改成可執行檔  
-
+  >
 步驟6.使用tmux工具  
   >tmux是一個終端覆用工具，允許在單個終端窗口中創建多個終端會話，並在這些會話之間進行切換。使用tmux可以在終端窗口中同時運行多個命令和程序，並且可以在不同會話之間保持持久性。  
   >安裝tmux:"sudo apt install tmux"  
-
+  >
   >在終端中運行 tmux 命令打開一個新的 tmux 會話，然後在會話中運行腳本。  
   >"tmux"   
   >"cd /etc/motion"   
