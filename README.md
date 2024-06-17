@@ -6,7 +6,7 @@
 
 # Surveillance-camera
 步驟1.幫樹莓派安裝作業系統  
-  >下載樹莓派映像檔:https://www.raspberrypi.com/software/operating-systems/  (這邊用的是桌面可以用滑鼠操作的請選Raspbian Buster with desktop)  
+  >下載樹莓派映像檔:https://www.raspberrypi.com/software/operating-systems/  
   >把SD卡格式化為FAT32格式  
   >用balenaEtcher工具把映像檔燒到SD卡中  
   >將SD卡插入樹莓派，開機並跟著步驟完成安裝  
