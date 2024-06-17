@@ -1,3 +1,9 @@
+網路監視器專案
+**描述**: 開發了一個基於樹莓派的簡單網路監視器，能夠實時監控並及時通知畫面變動。
+**技術**: 樹莓派、C語言、Linux系統
+**貢獻**: 負責設計和實現監視器程式碼，配置樹莓派環境，進行測試和故障排除。
+
+
 # Surveillance-camera
 步驟1.幫樹莓派安裝作業系統  
   >下載樹莓派映像檔:https://www.raspberrypi.com/software/operating-systems/  (這邊用的是桌面可以用滑鼠操作的請選Raspbian Buster with desktop)  
